@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Required</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  margin:0;
+  background:#f2f2f2;
+}
+
+/* Overlay */
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* Popup Box */
+.popup{
+  background:#ffffff;
+  width:90%;
+  max-width:360px;
+  padding:25px 20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.popup h3{
+  margin-top:0;
+  font-size:20px;
+}
+
+.popup p{
+  font-size:14px;
+  color:#333;
+  line-height:1.5;
+  margin:12px 0;
+}
+
+/* Buttons */
+.btn{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.btn-yes{
+  background:#32A0ED;
+  color:#fff;
+}
+
+.btn-no{
+  background:#e0e0e0;
+  color:#333;
+}
+
+.note{
+  font-size:12px;
+  color:#777;
+  margin-top:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+  <div class="popup">
+
+    <h3>⚠️ Telegram Required<br>
+      Trade With Sourabh Choudhary</h3>
+
+    <p>
+      To continue, you must have Telegram.<br>
+      Please confirm before proceeding.
+    </p>
+
+    <p>
+      आगे बढ़ने के लिए आपके पास Telegram होना आवश्यक है।<br>
+      कृपया आगे बढ़ने से पहले पुष्टि करें।
+    </p>
+
+    <button class="btn btn-yes" onclick="acceptTelegram()">
+      YES, I HAVE TELEGRAM
+    </button>
+
+    <button class="btn btn-no" onclick="denyTelegram()">
+      NO, I DON’T HAVE TELEGRAM
+    </button>
+
+    <div class="note">
+      Telegram is mandatory to access this page.
+    </div>
+
+  </div>
+</div>
+
+<script>
+function acceptTelegram(){
+  // MAIN LANDING PAGE (PIXEL WILL FIRE THERE)
+  window.location.href = "landing.html";
+}
+
+function denyTelegram(){
+  alert("Telegram is required to continue.\nटेलीग्राम आवश्यक है।");
+}
+</script>
+
+</body>
+</html>
